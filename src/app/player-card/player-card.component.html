@@ -1,0 +1,33 @@
+<section>
+    <mat-form-field class="mt-md">
+        <mat-label>Player Name</mat-label>
+        <input matInput placeholder="Ex: Yumi" [value]="player.name" [formControl]="playerNameInput"/>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Card Difficulty</mat-label>
+        <mat-select #cardDifficulty [formControl]="cardDifficultyInput">            
+            <mat-option *ngFor="let difficulty of cardDifficulties" [value]="difficulty">
+                {{ difficulty }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <ng-container *ngIf="cardDifficulty.value == 'Easy'">
+        <app-grid-sm [gridType]="GridTypes.Flowers" [playerId]="player.id"></app-grid-sm>    
+    </ng-container>
+    <ng-container *ngIf="cardDifficulty.value == 'Medium'">
+        <app-grid-sm [gridType]="GridTypes.Flowers" [playerId]="player.id"></app-grid-sm>
+        <app-grid-sm [gridType]="GridTypes.Suits" [playerId]="player.id"></app-grid-sm>
+    </ng-container>
+    <ng-container *ngIf="cardDifficulty.value == 'Hard'">
+        <app-grid-lg [playerId]="player.id"></app-grid-lg>    
+    </ng-container>
+    <button 
+        class="mt-lg" 
+        mat-raised-button 
+        color="warn"
+        (click)="onClearClicked()"
+    >
+        <mat-icon class="mr-txt-sm">delete</mat-icon>
+        Clear Card
+    </button>
+</section>

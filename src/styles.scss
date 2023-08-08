@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mt-sm {
+    margin-top: 1rem !important;
+}
+
+.mt-md {
+    margin-top: 2rem !important;
+}
+
+.mt-lg {
+    margin-top: 3rem !important;
+}
+
+.mr-txt-sm {
+    margin-right: 0.1rem !important;
+}
+
+.mat-tab-group {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Material UI Overrides */
+.mat-list-item-content {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100%;
+}

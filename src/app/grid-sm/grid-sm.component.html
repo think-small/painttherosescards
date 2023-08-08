@@ -1,0 +1,95 @@
+<table *ngIf="gridType == GridTypes.Flowers">
+    <tr>
+        <td></td>
+        <td>
+            <img src="../../assets/icons/red-flower.png" />
+        </td>
+        <td>
+            <img src="../../assets/icons/yellow-flower.png" />
+        </td>
+        <td>
+            <img src="../../assets/icons/purple-flower.png" />
+        </td>
+        <td>
+            <img src="../../assets/icons/pink-flower.png" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="../../assets/icons/pink-flower.png" />
+        </td>                
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="../../assets/icons/purple-flower.png" />
+        </td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="../../assets/icons/yellow-flower.png" />
+        </td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="../../assets/icons/red-flower.png" />
+        </td>
+        <td interactiveCell [playerId]="playerId"></td>
+    </tr>
+</table>
+
+<table *ngIf="gridType == GridTypes.Suits">
+    <tr>
+        <td></td>
+        <td>
+            <img src="../../assets/icons/spade.png" />
+        </td>
+        <td>
+            <img src="../../assets/icons/heart.png" />
+        </td>
+        <td>
+            <img src="../../assets/icons/diamond.png" />
+        </td>
+        <td>
+            <img src="../../assets/icons/club.png" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="../../assets/icons/club.png" />
+        </td>                
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="../../assets/icons/diamond.png" />
+        </td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="../../assets/icons/heart.png" />
+        </td>
+        <td interactiveCell [playerId]="playerId"></td>
+        <td interactiveCell [playerId]="playerId"></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="../../assets/icons/spade.png" />
+        </td>
+        <td interactiveCell [playerId]="playerId"></td>
+    </tr>
+</table>
