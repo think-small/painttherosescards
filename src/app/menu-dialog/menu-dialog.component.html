@@ -1,6 +1,6 @@
-<section>
-    <h2>Player Management</h2>
+<h2 mat-dialog-content>Player Management</h2>
 
+<mat-dialog-content>
     <mat-list>
         <mat-list-item *ngFor="let player of players$ | async">
             <input 
@@ -12,8 +12,8 @@
                 readonly
                 (keyup)="onKeyup($event, player)"
             /> 
-            <mat-icon (click)="toggleDisable(nameInput, player)" class="mr-txt-md">edit</mat-icon>
-            <mat-icon (click)="onRemovePlayerClick(player)">delete_forever</mat-icon>
+            <mat-icon tabindex="3" (click)="toggleDisable(nameInput, player)" class="mr-txt-md">edit</mat-icon>
+            <mat-icon tabindex="4" (click)="onRemovePlayerClick(player)">delete_forever</mat-icon>
         </mat-list-item>
     </mat-list>
     
@@ -21,8 +21,17 @@
         mat-raised-button 
         color="primary"
         (click)="onAddPlayerClick()"
+        tabindex="1"
     >
         <mat-icon class="mr-txt-sm">person_add</mat-icon>
         Add Player
     </button>
-</section>
+    <button 
+        mat-flat-button
+        matDialogClose
+        tabindex="2"
+    >
+        <mat-icon>close</mat-icon>
+        Close
+    </button>
+</mat-dialog-content>
