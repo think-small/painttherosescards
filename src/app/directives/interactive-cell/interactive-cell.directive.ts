@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
-import { InteractiveCellService } from '../services/interactive-cell/interactive-cell.service';
+import { InteractiveCellService } from '../../services/interactive-cell/interactive-cell.service';
 import { Subscription } from 'rxjs';
 
 @Directive({

@@ -1,8 +1,4 @@
 <section>
-    <mat-form-field class="mt-md">
-        <mat-label>Player Name</mat-label>
-        <input matInput placeholder="Ex: Yumi" [value]="player.name" [formControl]="playerNameInput"/>
-    </mat-form-field>
     <mat-form-field>
         <mat-label>Card Difficulty</mat-label>
         <mat-select #cardDifficulty [formControl]="cardDifficultyInput">            
@@ -22,7 +18,7 @@
         <app-grid-lg [playerId]="player.id"></app-grid-lg>    
     </ng-container>
     <button 
-        class="mt-lg" 
+        class="mt-lg btn__clear-card" 
         mat-raised-button 
         color="warn"
         (click)="onClearClicked()"

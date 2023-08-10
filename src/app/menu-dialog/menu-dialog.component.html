@@ -3,8 +3,16 @@
 
     <mat-list>
         <mat-list-item *ngFor="let player of players$ | async">
-            <span>{{ player.name }} ({{ player.cardDifficulty }})</span>
-            <mat-icon (click)="onRemovePlayerClick(player)">delete</mat-icon>
+            <input 
+                matInput 
+                #nameInput 
+                type="text" 
+                [value]="player.name" 
+                toggleReadonly [playerId]="player.id"
+                readonly
+            /> 
+            <mat-icon (click)="toggleDisable(nameInput, player)">edit</mat-icon>
+            <mat-icon (click)="onRemovePlayerClick(player)">delete_forever</mat-icon>
         </mat-list-item>
     </mat-list>
     

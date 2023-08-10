@@ -10,8 +10,8 @@
     <span>Paint the Roses</span>    
 </mat-toolbar>
 
-<mat-tab-group>
+<mat-tab-group animationDuration="0">
     <mat-tab *ngFor="let player of players$ | async" [label]="player.name">
-        <app-player-card [player]="player"></app-player-card>
+        <app-player-card [player]="player"></app-player-card>   
     </mat-tab>
 </mat-tab-group>

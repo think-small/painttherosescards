@@ -16,11 +16,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InteractiveCellDirective } from './directives/interactive-cell.directive';
+import { InteractiveCellDirective } from './directives/interactive-cell/interactive-cell.directive';
 import { GridSmComponent } from './grid-sm/grid-sm.component';
 import { GridLgComponent } from './grid-lg/grid-lg.component';
 import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 import { PlayerCardComponent } from './player-card/player-card.component';
+import { ToggleReadonlyDirective } from './directives/toggle-readonly/toggle-readonly.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PlayerCardComponent } from './player-card/player-card.component';
     GridSmComponent,
     GridLgComponent,
     MenuDialogComponent,
-    PlayerCardComponent
+    PlayerCardComponent,
+    ToggleReadonlyDirective
   ],
   imports: [
     BrowserModule,

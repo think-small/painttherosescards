@@ -2,3 +2,9 @@ section {
     display: flex;
     flex-direction: column;
 }
+
+.btn__clear-card {
+    position: fixed; 
+    bottom: 5px;
+    width: 90%;
+}

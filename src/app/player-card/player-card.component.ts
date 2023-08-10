@@ -21,7 +21,6 @@ export class PlayerCardComponent implements OnInit, OnDestroy {
   public playerNameInput = new FormControl();
   public cardDifficultyInput = new FormControl();
 
-  private subNameInput!: Subscription;
   private subCardDifficultyInput!: Subscription;
   
   constructor(
@@ -31,13 +30,6 @@ export class PlayerCardComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.playerNameInput.setValue(this.player.name);
 
-    this.subNameInput = this.playerNameInput.valueChanges
-      .pipe(debounceTime(500))
-      .subscribe((name: string) => {
-        const updatedPlayer = {...this.player, name};
-        this.playerService.updatePlayer(updatedPlayer);    
-      });
-
     this.subCardDifficultyInput = this.cardDifficultyInput.valueChanges
       .subscribe((cardDifficulty: string) => {
         const updatedPlayer = {...this.player, cardDifficulty };
@@ -46,7 +38,6 @@ export class PlayerCardComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.subNameInput.unsubscribe();
     this.subCardDifficultyInput.unsubscribe();
   }
 

@@ -7,3 +7,7 @@ section {
 mat-icon:hover {
     cursor: pointer;
 }
+
+input:not(:read-only) {
+    border-bottom: 3px solid lightblue;
+}
