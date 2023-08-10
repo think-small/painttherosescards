@@ -30,7 +30,7 @@ export class ToggleReadonlyDirective implements OnInit, OnDestroy {
           this.element.nativeElement.blur();
         }
         else {
-          this.element.nativeElement.focus();
+          this.element.nativeElement.select();
         }
       });
 

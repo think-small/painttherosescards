@@ -10,6 +10,7 @@
                 [value]="player.name" 
                 toggleReadonly [playerId]="player.id"
                 readonly
+                (keyup)="onKeyup($event, player)"
             /> 
             <mat-icon (click)="toggleDisable(nameInput, player)">edit</mat-icon>
             <mat-icon (click)="onRemovePlayerClick(player)">delete_forever</mat-icon>
